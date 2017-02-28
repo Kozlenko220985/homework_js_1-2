@@ -1,3 +1,6 @@
+
+
+
 var a = prompt ("введите число" , 1);
 var n = prompt ("введите степень" , 1);
 
@@ -14,19 +17,27 @@ function pow(a, n) {
 alert(pow(a, n));
 
 
-var arr = ['Рома', 'Андрей', 'Эдуард', 'Кирил', 'Константин'];
 
-var a = prompt("Enter your name");
 
-for (var i = 0; i < arr.length; i++){
-	if (a == arr[i]) {
-      alert( a + " вы успешно вошли! ");
-      break;
-    } else{
-      alert("Ошибка")
-      break;
-    }
+var arr = []; 
+
+var arrayNumb = +prompt('введите количество имен', '');
+for (i = 0; i < arrayNumb; i++){
+arr.push ( prompt('Enter names', '') ); 
 }
 
+var userName = prompt('Enter your name', '');  
+    
+for (var i = 0; i < arr.length; i++) {
+ if (userName == arr[i]){
+ var succesLogin = true;
+ var login = arr[i];
+ } 
+}
 
+ if (succesLogin == true) {
+ alert(login + ', ' + ' ' + 'Вы успешно вошли');
+} else {
+  alert('Имя - ' + userName + ' ' + 'не существует.');
+}
 
